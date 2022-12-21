@@ -13,7 +13,7 @@ public class LoginPage extends BasePage
     @FindBy(how = How.NAME, using = "password")
     private WebElement passwordFieldLocator;
 
-    @FindBy(how = How.CLASS_NAME, using = "btn btn-success")
+    @FindBy(how = How.XPATH, using = "//input[@type=\"submit\"]")
     private WebElement logInbuttonLocator;
 
     public WebElement getLogInbuttonLocator()
