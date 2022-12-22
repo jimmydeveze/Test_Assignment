@@ -29,15 +29,4 @@ public class BaseSteps
     {
         locator.click();;
     }
-
-    public Boolean isDisplayed(WebElement locator)
-    {
-        try
-        {
-            return  locator.isDisplayed();
-        }catch (NoSuchElementException e)
-        {
-            return false;
-        }
-    }
 }
