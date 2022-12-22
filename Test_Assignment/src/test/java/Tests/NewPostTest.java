@@ -1,13 +1,15 @@
 package Tests;
 
 import Data.PostDate;
-import Pages.NewPostPage;
 import Steps.DetailStep;
 import Steps.HomeSteps;
 import Steps.LoginSteps;
 import Steps.NewPostSteps;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class NewPostTest extends BaseTest
 {
@@ -35,5 +37,7 @@ public class NewPostTest extends BaseTest
         Assert.assertEquals(date.title, detailStep.getTitleText());
         Assert.assertEquals(date.subTitle, detailStep.getSubTitle());
         Assert.assertEquals(date.body, detailStep.getBody());
+        Assert.assertTrue(detailStep.getInfo().contains("Jimmy"));
+        Assert.assertTrue(detailStep.getInfo().contains(detailStep.getDate()));
     }
 }
