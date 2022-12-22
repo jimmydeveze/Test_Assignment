@@ -23,6 +23,11 @@ public class NewPostSteps extends BaseSteps
         newPostPage.getBodyFieldLocator().sendKeys(inputText);
     }
 
+    public void clickCreate()
+    {
+        newPostPage.getCreateButton().click();
+    }
+
     public NewPostSteps(WebDriver driver)
     {
         super(driver);
