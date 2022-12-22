@@ -1,7 +1,10 @@
 package Data;
 
-public class PostDate
+public class DataToInput
 {
+    public  String user = "Jimmy";
+    public  String password = "9gagemmanuel";
+
     public String title = "Lorem Ipsum";
     public String subTitle = "What is Lorem Ipsum?";
     public String body = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the " +

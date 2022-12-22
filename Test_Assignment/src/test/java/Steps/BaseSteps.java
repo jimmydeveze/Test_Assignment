@@ -1,5 +1,6 @@
 package Steps;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,15 +14,16 @@ public class BaseSteps
         this.driver = driver;
     }
 
-    /*//public void type(String inputText, WebElement locator)
+    public  String getAttribute(WebElement locator, String attribute)
     {
-        locator.sendKeys(inputText);
-    }*/
+        return locator.getAttribute(attribute);
+    }
 
-    /*public String getText(WebElement locator)
+    public void higtLight(WebElement locator)
     {
-        return locator.getText();
-    }*/
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].setAttribute('style','background: yellow;');", locator);
+    }
 
     public void click(WebElement locator)
     {

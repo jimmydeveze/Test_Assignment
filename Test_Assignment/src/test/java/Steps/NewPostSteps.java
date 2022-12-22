@@ -28,6 +28,18 @@ public class NewPostSteps extends BaseSteps
         newPostPage.getCreateButton().click();
     }
 
+    public String requieredTitleField()
+    {
+        higtLight(newPostPage.getTitleFieldLocator());
+        return getAttribute(newPostPage.getTitleFieldLocator(), "required");
+    }
+
+    public String requieredSubTitleField()
+    {
+        higtLight(newPostPage.getSubtitleFieldLocator());
+        return getAttribute(newPostPage.getSubtitleFieldLocator(), "required");
+    }
+
     public NewPostSteps(WebDriver driver)
     {
         super(driver);
