@@ -31,6 +31,11 @@ public class DetailStep extends BaseSteps
         return detailPage.getInfoLocator().getText();
     }
 
+    public void clickEditButton()
+    {
+        detailPage.getEditLocator().click();
+    }
+
     public String getDate()
     {
         LocalDate date = LocalDate.now();

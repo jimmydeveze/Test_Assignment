@@ -10,6 +10,14 @@ public class HomePage extends BasePage
     @FindBy(how = How.LINK_TEXT, using = "New Post")
     private WebElement newPostLinkLocator;
 
+    @FindBy(how = How.LINK_TEXT, using = "Posts")
+    private WebElement postLinkLocator;
+
+    public WebElement getPostLinkLocator()
+    {
+        return postLinkLocator;
+    }
+
     public WebElement getNewPostLinkLocator()
     {
         return newPostLinkLocator;

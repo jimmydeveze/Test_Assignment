@@ -19,6 +19,14 @@ public class DetailPage extends BasePage
     @FindBy(how = How.XPATH, using = "//small")
     private WebElement infoLocator;
 
+    @FindBy(how = How.CLASS_NAME, using = "bi-pencil")
+    private WebElement editLocator;
+
+    public WebElement getEditLocator()
+    {
+        return editLocator;
+    }
+
     public WebElement getInfoLocator()
     {
         return infoLocator;

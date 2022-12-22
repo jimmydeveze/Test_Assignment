@@ -13,6 +13,11 @@ public class HomeSteps extends BaseSteps
         homePage.getNewPostLinkLocator().click();
     }
 
+    public void clickPost()
+    {
+        homePage.getPostLinkLocator().click();
+    }
+
     public HomeSteps(WebDriver driver)
     {
         super(driver);

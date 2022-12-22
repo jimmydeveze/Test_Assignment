@@ -40,6 +40,21 @@ public class NewPostSteps extends BaseSteps
         return getAttribute(newPostPage.getSubtitleFieldLocator(), "required");
     }
 
+    public void clearTitle()
+    {
+        newPostPage.getTitleFieldLocator().clear();
+    }
+
+    public void clearSubTitle()
+    {
+        newPostPage.getSubtitleFieldLocator().clear();
+    }
+
+    public void clearBody()
+    {
+        newPostPage.getBodyFieldLocator().clear();
+    }
+
     public NewPostSteps(WebDriver driver)
     {
         super(driver);
